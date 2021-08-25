@@ -17,9 +17,9 @@ public class player_movement : MonoBehaviour
     void Update()
     {
         float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertocal");
+        float inputY = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(speed.x * inputX, speed.y * inputY);
+        Vector2 movement = new Vector2(5 * inputX, 5 * inputY);
 
         transform.Translate(movement * Time.deltaTime);
     }
